@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bb8moixp38cnk"]
+
+[ext_resource type="VideoStream" uid="uid://ia2ptk2xg2ts" path="res://Assets/GainArm.ogv" id="1_hmudo"]
+[ext_resource type="Script" uid="uid://bi7og4ok7iwwo" path="res://Scripts/intro.gd" id="1_otpl1"]
+[ext_resource type="AudioStream" uid="uid://dydefh64obgav" path="res://Assets/SFX/armCollect.wav" id="2_otpl1"]
+
+[node name="Node2D" type="Node2D" unique_id=1047647338]
+script = ExtResource("1_otpl1")
+tohere = "res://Scenes/Levels/Level2.tscn"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=247639956]
+zoom = Vector2(1.5, 1.5)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=343591988]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -240.0
+offset_right = 360.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_hmudo")
+speed_scale = 2.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2017999043]
+stream = ExtResource("2_otpl1")
+autoplay = true

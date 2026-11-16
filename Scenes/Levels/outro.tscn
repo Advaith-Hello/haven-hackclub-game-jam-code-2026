@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dd15tchvgy2e8"]
+
+[ext_resource type="Script" uid="uid://bi7og4ok7iwwo" path="res://Scripts/intro.gd" id="1_5pe5v"]
+[ext_resource type="VideoStream" uid="uid://cobtl3gk850m" path="res://Assets/Outro.ogv" id="1_r0urb"]
+[ext_resource type="AudioStream" uid="uid://h2rds3moq8eb" path="res://Assets/Music/RickRoll.wav" id="2_5pe5v"]
+
+[node name="Node2D" type="Node2D" unique_id=1073892962]
+script = ExtResource("1_5pe5v")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=894579430]
+zoom = Vector2(1.5, 1.5)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1017428835]
+stream = ExtResource("2_5pe5v")
+autoplay = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=806857689]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -150.0
+offset_right = 250.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_r0urb")
+loop = true

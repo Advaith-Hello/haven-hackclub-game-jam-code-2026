@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bqqg6r45avmi0"]
+
+[ext_resource type="Script" uid="uid://68hjcppmbi8" path="res://Scripts/dog.gd" id="1_huvmg"]
+[ext_resource type="Texture2D" uid="uid://f628v88bpdwe" path="res://icon.svg" id="2_wnbxp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g6dyy"]
+radius = 58.694122
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1615661142]
+script = ExtResource("1_huvmg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=263001337]
+texture = ExtResource("2_wnbxp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1966591945]
+shape = SubResource("CircleShape2D_g6dyy")
